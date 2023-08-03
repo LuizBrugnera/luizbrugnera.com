@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./TecList.css";
+
 interface TecListProps {
   tecList: {
     name: string;

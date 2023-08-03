@@ -1,0 +1,43 @@
+.logo {
+  background-image: linear-gradient(to right, red, rgb(255, 162, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 30px 0px 160px 0px;
+  width: 90%;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.839);
+
+  font-size: 1.4rem;
+
+  font-weight: 500;
+  font-style: italic;
+
+  padding: 0 2rem;
+}
+
+.nav a:hover {
+  color: rgb(235, 67, 0);
+}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./FooterList.css";
+
 interface FooterListProps {
   arrItems: {
     img?: string;

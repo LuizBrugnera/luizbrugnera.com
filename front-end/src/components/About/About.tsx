@@ -1,9 +1,12 @@
 import React from "react";
-import img_brugnera from "../assets/img_brugnera.jpg";
+import img_brugnera from "../../assets/img_brugnera.jpg";
+
+import "./About.css";
+
 const About = () => {
   return (
     <section id="about">
-      <h1 className="title margintop">Sobre mim</h1>
+      <h1 className="title_about margintop">Sobre mim</h1>
       <ul className="list_about">
         <li>
           <div className="container_about">

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./ProjectList.css";
+
 interface ProjectListProps {
   projList: {
       href: string;

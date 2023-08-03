@@ -1,10 +1,11 @@
 import React from "react";
 
-import whatsapp_icon from "../assets/icons/whatsapp.png";
-import github_icon from "../assets/icons/github.png";
-import linkedin_icon from "../assets/icons/linkedin.png";
+import whatsapp_icon from "../../assets/icons/whatsapp.png";
+import github_icon from "../../assets/icons/github.png";
+import linkedin_icon from "../../assets/icons/linkedin.png";
 
 import FooterList from "./FooterList";
+import "./Footer.css";
 
 const Footer = () => {
   const contato = [

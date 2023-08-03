@@ -1,16 +1,19 @@
 import React from 'react'
 
-import react_icon from "../assets/icons/react.png";
-import typescript_icon from "../assets/icons/typescript.png";
-import node_icon from "../assets/icons/node.png";
-import mysql_icon from "../assets/icons/mysql.png";
-import mongo_icon from "../assets/icons/mongo.png";
-import aws_icon from "../assets/icons/aws.png";
-import whatsapp_icon from "../assets/icons/whatsapp.png";
-import github_icon from "../assets/icons/github.png";
-import linkedin_icon from "../assets/icons/linkedin.png";
+import react_icon from "../../assets/icons/react.png";
+import typescript_icon from "../../assets/icons/typescript.png";
+import node_icon from "../../assets/icons/node.png";
+import mysql_icon from "../../assets/icons/mysql.png";
+import mongo_icon from "../../assets/icons/mongo.png";
+import aws_icon from "../../assets/icons/aws.png";
+import whatsapp_icon from "../../assets/icons/whatsapp.png";
+import github_icon from "../../assets/icons/github.png";
+import linkedin_icon from "../../assets/icons/linkedin.png";
+
 import TecList from './TecList';
 import SocialButton from './SocialButton';
+
+import "./Header.css";
 
 const Header = () => {
 
@@ -65,11 +68,11 @@ const Header = () => {
         <div>
           <h1 className="header_title">Luiz Brugnera Desenvolvedor</h1>
           <div className="container_sub_title">
-            <span className="header_sub_title">Fullstack</span>
+            <h1>Fullstack</h1>
             <TecList tecList={teclist}/>
           </div>
         </div>
-        <div className="abstract">
+        <div className="header_abstract">
           <p>
             Me chamo Luiz Ricardo Brugnera, sou graduando no IFSUL PASSO FUNDO,
             20 anos, desenvolvedor fullstack React, Node e Next, saiba mais

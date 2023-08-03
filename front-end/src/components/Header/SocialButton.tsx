@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./SocialButton.css";
+
 interface SocialButtonProps {
     infoArr: {
         name: string;

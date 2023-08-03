@@ -1,10 +1,12 @@
 import React from "react";
 
-import socialcompass from "../assets/socialcompass.png";
-import react from "../assets/icons/react.png";
-import node from "../assets/icons/node.png";
-import mongo from "../assets/icons/mongo.png";
+import socialcompass from "../../assets/socialcompass.png";
+import react from "../../assets/icons/react.png";
+import node from "../../assets/icons/node.png";
+import mongo from "../../assets/icons/mongo.png";
+
 import ProjectList from "./ProjectList";
+import "./Project.css";
 
 const Project = () => {
   const projList = [
@@ -56,7 +58,7 @@ const Project = () => {
 
   return (
     <section id="projects">
-      <h1 className="title">Projetos</h1>
+      <h1 className="title_project">Projetos</h1>
       <ProjectList projList={projList} />
     </section>
   );
