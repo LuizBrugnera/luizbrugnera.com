@@ -9,8 +9,56 @@ import aws_icon from "../assets/icons/aws.png";
 import whatsapp_icon from "../assets/icons/whatsapp.png";
 import github_icon from "../assets/icons/github.png";
 import linkedin_icon from "../assets/icons/linkedin.png";
+import TecList from './TecList';
+import SocialButton from './SocialButton';
 
 const Header = () => {
+
+  const teclist = [
+    {
+      name: "React",
+      imgSrc: react_icon,
+    },
+    {
+      name: "Typescript",
+      imgSrc: typescript_icon,
+    },
+    {
+      name: "Node",
+      imgSrc: node_icon,
+    },
+    {
+      name: "mySQL",
+      imgSrc: mysql_icon,
+    },
+    {
+      name: "Mongo",
+      imgSrc: mongo_icon,
+    },
+    {
+      name: "AWS",
+      imgSrc: aws_icon,
+    },
+  ];
+
+  const infoArr = [
+    {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/in/luiz-ricardo-brugnera-8b6810236/",
+      imgSrc: linkedin_icon,
+    },
+    {
+      name: "Github",
+      href: "https://github.com/LuizBrugnera",
+      imgSrc: github_icon,
+    },
+    {
+      name: "Whatsapp",
+      href: "https://api.whatsapp.com/send?phone=555499276395&text=Ola!%20Te%20conheci%20do%20seu%20portfolio",
+      imgSrc: whatsapp_icon,
+    },
+  ]
+
   return (
     <header className="header" id="home">
         
@@ -18,32 +66,7 @@ const Header = () => {
           <h1 className="header_title">Luiz Brugnera Desenvolvedor</h1>
           <div className="container_sub_title">
             <span className="header_sub_title">Fullstack</span>
-            <ul className="list_tec">
-              <li>
-                <img className="icons" src={react_icon} alt="React" />
-                React
-              </li>
-              <li>
-                <img className="icons" src={typescript_icon} alt="Typescript" />
-                TypeScript
-              </li>
-              <li>
-                <img className="icons" src={node_icon} alt="Node" />
-                Node
-              </li>
-              <li>
-                <img className="icons" src={mysql_icon} alt="mySQL" />
-                mySQL
-              </li>
-              <li>
-                <img className="icons" src={mongo_icon} alt="Mongo" />
-                Mongo
-              </li>
-              <li>
-                <img className="icons" src={aws_icon} alt="AWS" />
-                AWS
-              </li>
-            </ul>
+            <TecList tecList={teclist}/>
           </div>
         </div>
         <div className="abstract">
@@ -54,28 +77,10 @@ const Header = () => {
           </p>
         </div>
 
-        <ul className="contacts">
-          <li>
-            <a href="https://www.linkedin.com/in/luiz-ricardo-brugnera-8b6810236/" target="_blank" rel="noreferrer"> 
-              <img className="icons" src={linkedin_icon} alt="Linkedin" />
-              Linkedin
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/LuizBrugnera" target="_blank" rel="noreferrer">
-              <img className="icons" src={github_icon} alt="Github" />
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://api.whatsapp.com/send?phone=555499276395&text=Ola!%20Te%20conheci%20do%20seu%20portfolio" target="_blank" rel="noreferrer">
-              <img className="icons" src={whatsapp_icon} alt="WhatsApp" />
-              Whatsapp
-            </a>
-          </li>
-        </ul>
+        <SocialButton infoArr={infoArr}/>
       </header>
   )
 }
 
 export default Header
+
