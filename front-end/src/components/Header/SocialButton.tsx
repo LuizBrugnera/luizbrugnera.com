@@ -13,8 +13,8 @@ interface SocialButtonProps {
 const SocialButton = ({infoArr} : SocialButtonProps) => {
   return (
     <ul className="contacts">
-      {infoArr.map((info) => (
-        <li>
+      {infoArr.map((info, index) => (
+        <li key={index + "sb"}>
             <a href={info.href} target="_blank" rel="noreferrer">
                 <img className="icons" src={info.imgSrc} alt={info.name} />
                 {info.name}

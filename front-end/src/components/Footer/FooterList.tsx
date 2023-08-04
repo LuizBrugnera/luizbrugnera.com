@@ -23,7 +23,7 @@ const FooterList = ({ arrItems, title }: FooterListProps) => {
       <h2 className="title_footer">{title}</h2>
       <ul>
         {arrItems.map((item, index) => (
-          <li key={index}>
+          <li key={index + "fl"}>
             <button className="item_footer"
               onClick={() => {
                 if(item.a?.inPage) {

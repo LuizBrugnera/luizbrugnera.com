@@ -18,8 +18,8 @@ interface ProjectListProps {
 const ProjectList = ({ projList }: ProjectListProps) => {
   return (
     <ul className="proj_list">
-      {projList.map((proj) => (
-        <li className="proj_item">
+      {projList.map((proj, index) => (
+        <li className="proj_item" key={index + "proj"}>
           <button
             onClick={() =>
               window.open(proj.href, "_blank", "noopener noreferrer")

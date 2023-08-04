@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import whatsapp_icon from "../../assets/icons/whatsapp.png";
 import github_icon from "../../assets/icons/github.png";
@@ -51,7 +51,7 @@ const Footer = () => {
     {
       a: {
         text: "Sobre mim",
-        href: "#aboutme",
+        href: "#about",
         inPage: true,
       },
     },
@@ -72,14 +72,32 @@ const Footer = () => {
     },
   ];
 
+
+  const [isScreenSmall, setIsScreenSmall] = useState(false);
+
+  const checkScreenSize = () => {
+    setIsScreenSmall(window.innerWidth < 1125);
+  };
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+
   return (
     <footer className="footer">
+      {!isScreenSmall && (
+      <>
       <div>
-        <FooterList arrItems={navegar} title="Navegar" />
-      </div>
-      <div>
-        <FooterList arrItems={projetos} title="Projetos Principais" />
-      </div>
+      <FooterList arrItems={navegar} title="Navegar" />
+    </div>
+    <div>
+      <FooterList arrItems={projetos} title="Projetos Principais" />
+    </div>
+      </>)}
       <div>
         <FooterList arrItems={contato} title="Contato" />
       </div>

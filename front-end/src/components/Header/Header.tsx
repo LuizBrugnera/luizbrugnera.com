@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import react_icon from "../../assets/icons/react.png";
 import typescript_icon from "../../assets/icons/typescript.png";
@@ -44,7 +44,7 @@ const Header = () => {
     },
   ];
 
-  const infoArr = [
+  const [infoArr, setInfoArr] = useState([
     {
       name: "Linkedin",
       href: "https://www.linkedin.com/in/luiz-ricardo-brugnera-8b6810236/",
@@ -60,7 +60,53 @@ const Header = () => {
       href: "https://api.whatsapp.com/send?phone=555499276395&text=Ola!%20Te%20conheci%20do%20seu%20portfolio",
       imgSrc: whatsapp_icon,
     },
-  ]
+  ]);
+
+  const [isScreenSmall, setIsScreenSmall] = useState(false);
+
+  const checkScreenSize = () => {
+    setIsScreenSmall(window.innerWidth < 715);
+    if(window.innerWidth < 715){
+      setInfoArr([
+        {
+          name: "Linkedin",
+          href: "https://www.linkedin.com/in/luiz-ricardo-brugnera-8b6810236/",
+          imgSrc: linkedin_icon,
+        },
+        {
+          name: "Whatsapp",
+          href: "https://api.whatsapp.com/send?phone=555499276395&text=Ola!%20Te%20conheci%20do%20seu%20portfolio",
+          imgSrc: whatsapp_icon,
+        },
+      ])
+    } else {
+      setInfoArr([
+        {
+          name: "Linkedin",
+          href: "https://www.linkedin.com/in/luiz-ricardo-brugnera-8b6810236/",
+          imgSrc: linkedin_icon,
+        },
+        {
+          name: "Github",
+          href: "https://github.com/LuizBrugnera",
+          imgSrc: github_icon,
+        },
+        {
+          name: "Whatsapp",
+          href: "https://api.whatsapp.com/send?phone=555499276395&text=Ola!%20Te%20conheci%20do%20seu%20portfolio",
+          imgSrc: whatsapp_icon,
+        },
+      ])
+    }
+  };
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
 
   return (
     <header className="header" id="home">
@@ -69,7 +115,7 @@ const Header = () => {
           <h1 className="header_title">Luiz Brugnera Desenvolvedor</h1>
           <div className="container_sub_title">
             <h1>Fullstack</h1>
-            <TecList tecList={teclist}/>
+            {!isScreenSmall && (<TecList tecList={teclist}/>)}
           </div>
         </div>
         <div className="header_abstract">
