@@ -64,3 +64,23 @@
     height: 20px;
   }
   
+  @media screen and (max-width: 500px) {
+
+    .proj_item button {
+      height: 430px;
+    }
+
+    .proj_item {
+      height: 420px;
+    }
+
+    .proj_box img {
+      height: 250px;
+    }
+
+    .proj_icons img {
+      height: 20px;
+    }
+
+
+  }

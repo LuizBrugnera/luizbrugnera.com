@@ -49,9 +49,27 @@
   width: 20px;
 }
 
-
 @media screen and (max-width: 900px) {
-  .contacts li a{
+  .contacts li a {
     font-size: 0.8rem;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .contacts li {
+    width: 150px;
+  }
+
+  .contacts li a {
+    width: 100%;
+    padding: 8px 10px 8px 10px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .contacts li {
+    width: 130px;
+  }
+}
+
