@@ -35,7 +35,7 @@
   word-spacing: normal;
   font-size: 1.1rem;
 
-  font-weight: 400;
+  font-weight: 500;
   text-align: left;
 
   background-color: #ece9e1;
@@ -69,7 +69,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  
+
   gap: 20px;
 
   width: 100%;
@@ -78,44 +78,39 @@
   word-spacing: normal;
   font-size: 1.1rem;
 
-  font-weight: 400;
+  font-weight: 500;
   text-align: left;
 
   background-color: #ece9e1;
   color: #332e2eec;
 }
 
-
-
 @media screen and (max-width: 1185px) {
-
-  .list_about li p, .list_about li span {
+  .list_about li p,
+  .list_about li span {
     font-size: 18px;
   }
-
 }
 
 @media screen and (max-width: 1125px) {
-
-  .list_about li p, .list_about li span {
+  .list_about li p,
+  .list_about li span {
     font-size: 18px;
   }
 
   .container_about {
     padding: 0px 30px;
   }
-
 }
 @media screen and (max-width: 900px) {
-
-  .header_title, .container_sub_title h1 {
+  .header_title,
+  .container_sub_title h1 {
     padding: 20px 20px;
   }
 
   .about_item {
     padding: 0px 60px;
   }
-  
 
   .about_item h2 {
     text-align: center;

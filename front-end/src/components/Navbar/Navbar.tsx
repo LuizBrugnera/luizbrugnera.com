@@ -4,12 +4,10 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [isScreenSmall, setIsScreenSmall] = useState(false);
-  const [isScreenSmall520, setIsScreenSmall520] = useState(false);
   const [open, setOpen] = useState(false);
 
   const checkScreenSize = () => {
     setIsScreenSmall(window.innerWidth < 1300);
-    setIsScreenSmall520(window.innerWidth < 520);
   };
 
   const changeOpen = () => {
@@ -25,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      {!isScreenSmall520 && <div className="logo"> &lt;LuizDev /&gt; </div>}
+      <div className="logo"> &lt;LuizDev /&gt; </div>
       {isScreenSmall ? (
         <>
           <div className={`hamburger-icon`} onClick={changeOpen}>
